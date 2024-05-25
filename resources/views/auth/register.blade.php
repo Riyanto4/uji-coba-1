@@ -17,7 +17,7 @@
       
                   <div class="mb-md-5 mt-md-4 pb-5">
       
-                    <h2 class="fw-bold mb-2 text-uppercase">Register for Restoran Yanto</h2>
+                    <h2 class="fw-bold mb-2 text-uppercase">Register for WEB RESTAURANT</h2>
                     <p class="text-white-50 mb-5">Please fill out the form to create an account!</p>
       
                     <form action="{{ route('register') }}" method="POST">
@@ -37,12 +37,16 @@
                           <input type="password" name="password_confirmation" id="typeConfirmPassword" class="form-control form-control-lg" />
                           <label class="form-label" for="typeConfirmPassword">Konfirmasi Password</label>
                       </div>
+                      @error('password')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
+
                   
                       <button class="btn btn-outline-light btn-lg px-5" type="submit">Daftar</button>
                   </form>
                   
       
-                    <a href="{{ route('login') }}" class="text-white-50 fw-bold">Login</a>
+                    <!-- <a href="{{ route('login') }}" class="text-white-50 fw-bold">Login</a> -->
                   </div>
                 </div>
               </div>

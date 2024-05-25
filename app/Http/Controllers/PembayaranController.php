@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PembayaranController extends Controller
 {
@@ -31,6 +33,17 @@ class PembayaranController extends Controller
 
     public function verifikasiPembayaran($userId)
     {
+
+        // Get the user's data from the Cart
+    $userCart = Cart::where('user_id', $userId)->first();
+
+    // Insert data into the Laporan table
+    Laporan::create([
+        'nama_user' => $userCart->user->username,
+        'total_harga' => $userCart->menu->harga * $userCart->quantity,
+        'tanggal_transaksi' => Carbon::now(),
+    ]);
+
         // Hapus pesanan dari Cart berdasarkan user_id
         Cart::where('user_id', $userId)->delete();
 

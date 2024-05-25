@@ -8,6 +8,7 @@ use App\Http\Controllers\DaftarPesananController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,20 +23,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Menampilkan form login
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
+// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+
 
 // Menampilkan form registrasi
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register')->middleware('guest');
 Route::post('/register', [AuthController::class, 'register'])->name('register')->middleware('guest');
 
 // Menangani proses login
-Route::post('/', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
 
 // Menangani proses logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //web
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 
@@ -68,6 +71,9 @@ Route::get('/daftarpesanan', [DaftarPesananController::class, 'index'])->name('d
 Route::get('/tambahQuantity/{id}', [DaftarPesananController::class, 'tambahQuantity'])->name('tambahQuantity');
 Route::get('/kurangQuantity/{id}', [DaftarPesananController::class, 'kurangQuantity'])->name('kurangQuantity');
 Route::get('/hapusDaftarPesanan/{index}', [DaftarPesananController::class, 'hapusDaftarPesanan'])->name('hapusDaftarPesanan');
+
+//laporan
+Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan');
 
 
 

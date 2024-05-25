@@ -8,11 +8,10 @@
 
     <!-- Page content-->
     <div class="container-fluid">
-        <h1 class="mt-4">Selamat Datang di Halaman Admin Restoran Yanto</h1>
+        <h1 class="mt-4">Selamat Datang di Halaman Admin WEB RESTAURANT</h1>
         <p>
-            Silahkan Mengatur tampilan dan manajemen dari Restoran Yanto
+            Silahkan Mengatur tampilan dan manajemen dari web restaurant
         </p>
-        
     </div>
 </div>
 

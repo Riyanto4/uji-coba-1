@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function index()
     {
         $menus = Menu::all();
-        $username = auth()->user()->username;
-        return view('web.home', compact('menus', 'username'));
+        // $username = auth()->user()->username;
+        return view('web.home', compact('menus'));
     }
 }

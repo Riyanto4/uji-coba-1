@@ -10,8 +10,8 @@ class MenuController extends Controller
 {
     public function addToCart($menuId)
     {
-        // Pastikan pengguna sudah login
-        if (Auth::check()) {
+         // Pastikan pengguna sudah login
+         if (Auth::check()) {
             $user = Auth::user();
 
             // Cek apakah item sudah ada di keranjang pengguna

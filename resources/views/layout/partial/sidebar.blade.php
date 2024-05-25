@@ -1,4 +1,5 @@
-        <div class="d-flex" id="wrapper">
+@if(Auth::check() && Auth::user()->username == "Admin")
+<div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
                
@@ -13,13 +14,18 @@
                         href="{{ route('admin.daftarmakanan') }}"
                         >Daftar Makanan</a
                     >
-                                       <a
+                   <a
                         class="list-group-item list-group-item-action list-group-item-light p-3"
                         href="{{ route('admin.pembayaran') }}"
                         >Pembayaran</a
                     >
-                   
+                    <a
+                        class="list-group-item list-group-item-action list-group-item-light p-3"
+                        href="{{ route('admin.laporan') }}"
+                        >Laporan Penjualan</a
+                    >
                 </div>
             </div>
             <!-- Page content wrapper-->
+            @endif
 

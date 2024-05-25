@@ -21,10 +21,10 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Jika autentikasi berhasil
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         } else {
             // Jika autentikasi gagal
-            return redirect()->route('/')->with('error', 'Username atau password salah.');
+            return redirect()->route('login')->with('error', 'Username atau password salah.');
         }
     }
     
@@ -38,7 +38,7 @@ class AuthController extends Controller
     {
         $this->validate($request, [
             'username' => 'required|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:6|confirmed',
             // Sesuaikan validasi sesuai kebutuhan Anda
         ]);
 
@@ -52,7 +52,7 @@ class AuthController extends Controller
         // Login setelah registrasi
         Auth::login($user);
 
-        return redirect('/home');
+        return redirect('/');
     }
 
     // Menangani proses logout

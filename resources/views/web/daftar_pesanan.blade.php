@@ -54,5 +54,15 @@
         <div class="mt-3">
             <p>Total Harga yang Harus Dibayar di Kasir: <strong>Rp. {{ $totalHarga }}</strong></p>
         </div>
+
+        <div class="d-flex justify-content-end">
+        <button class="btn btn-success" onclick="showMessageSuccess()">PROSES</button> 
+        </div>
     </div>
+
+    <script>
+        function     showMessageSuccess() {
+            alert('Berhasil!. Pesanan sudah diproses.')
+        }
+    </script>
 @endsection

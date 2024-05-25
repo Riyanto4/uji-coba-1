@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restoran Yanto</title>
+    <title>WEB RESTAURANT</title>
     <!-- Tambahkan link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand" href="{{ route('home') }}"><b>Restoran Yanto</b></a>
+            <a class="navbar-brand" href="{{ route('home') }}"><b>WEB RESTAURANT</b></a>
 
-            @if(auth()->check() && auth()->user()->username == 'yanto')
-                <a href="{{ route('admin.dashboard') }}" class="btn btn-outline-primary">Admin</a>
-            @endif
+           
+            @if(auth()->check())
+
+            <?php
+                function generateRandomString() {
+                    // Daftar huruf yang mungkin
+                    $letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    
+                    // Mendapatkan huruf acak
+                    $randomLetter = $letters[rand(0, strlen($letters) - 1)];
+                    
+                    // Mendapatkan angka acak antara 0 dan 9
+                    $randomNumber = rand(0, 9);
+                    
+                    // Menggabungkan huruf dan angka untuk membentuk string
+                    $randomString = $randomLetter . $randomNumber;
+    
+                    return $randomString;
+                }
+            ?>  
+
+    <a href="{{ route('home') }}" class="btn btn-outline-primary">{{ auth()->user()->username }} - <?= generateRandomString() ?></a>
+@else
+    <!-- If no user is logged in, display an empty string or other content -->
+    <!-- Example: -->
+    <span>No user logged in</span>
+@endif
 
             <div class="d-flex">
                 <!-- Profile Dropdown -->
                 <div class="dropdown me-2">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ auth()->user()->username }}
+                        
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                         <li><a class="dropdown-item" href="{{ route('daftar_pesanan') }}">Daftar Pesanan</a></li>
                     </ul>
                 </div>
 
-                <!-- Logout Form -->
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-outline-danger" type="submit">Logout</button>
-                </form>
+                <!-- Logout or Login Form -->
+                @if(auth()->check())
+                    <!-- If user is logged in, display the logout button -->
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-outline-danger" type="submit">Logout</button>
+                    </form>
+                @else
+                    <!-- If no user is logged in, display an empty form or other content -->
+                    <!-- Example: -->
+                    <form action="{{ route('login') }}" method="GET">
+                        <button class="btn btn-outline-primary" type="submit">Login</button>
+                    </form>
+                @endif
             </div>
         </div>
     </nav>

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('menu_id');
             $table->unsignedBigInteger('user_id');
             $table->integer('quantity');
+            // $table->integer('table_number');
             $table->timestamps();
 
             $table->foreign('menu_id')->references('id')->on('menu')->onDelete('cascade');
