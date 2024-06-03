@@ -4,7 +4,7 @@
 
 
 <div class="container mt-4">
-    <h2>Tambah Makanan</h2>
+    <h2>Tambah Data</h2>
 
     <form action="{{ route('admin.daftarmakanan.store') }}" method="post" enctype="multipart/form-data">
         @csrf
