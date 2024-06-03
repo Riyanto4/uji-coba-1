@@ -5,7 +5,7 @@
 
 <div id="page-content-wrapper">
     <div class="container-fluid">
-        <h1 class="mt-4">Edit Makanan</h1>
+        <h1 class="mt-4">Edit Data</h1>
 
         <form action="{{ route('admin.daftarmakanan.update', $menu->id) }}" method="post" enctype="multipart/form-data">
             @csrf
