@@ -17,7 +17,7 @@
       
                   <div class="mb-md-5 mt-md-4 pb-5">
       
-                    <h2 class="fw-bold mb-2 text-uppercase">Login WEB RESTAURANT</h2>
+                    <h2 class="fw-bold mb-2 text-uppercase">Login Data Warga</h2>
                     <p class="text-white-50 mb-5">Please enter your login and password!</p>
                     @if(session('error'))
                     <div class="alert alert-danger" role="alert">
