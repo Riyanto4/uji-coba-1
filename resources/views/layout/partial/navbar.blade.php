@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB RESTAURANT</title>
+    <title>Web Data Warga</title>
     <!-- Tambahkan link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand" href="{{ route('home') }}"><b>WEB RESTAURANT</b></a>
+            <a class="navbar-brand" href="{{ route('home') }}"><b>Web Data Warga</b></a>
 
            
             @if(auth()->check())
