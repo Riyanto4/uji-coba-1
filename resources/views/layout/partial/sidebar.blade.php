@@ -12,7 +12,7 @@
                     <a
                         class="list-group-item list-group-item-action list-group-item-light p-3"
                         href="{{ route('admin.daftarmakanan') }}"
-                        >Daftar Makanan</a
+                        >Daftar Warga</a
                     >
                    <a
                         class="list-group-item list-group-item-action list-group-item-light p-3"
