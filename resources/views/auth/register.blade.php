@@ -17,7 +17,7 @@
       
                   <div class="mb-md-5 mt-md-4 pb-5">
       
-                    <h2 class="fw-bold mb-2 text-uppercase">Register for WEB RESTAURANT</h2>
+                    <h2 class="fw-bold mb-2 text-uppercase">Register for Data Warga</h2>
                     <p class="text-white-50 mb-5">Please fill out the form to create an account!</p>
       
                     <form action="{{ route('register') }}" method="POST">
