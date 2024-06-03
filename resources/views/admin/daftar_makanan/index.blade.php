@@ -5,9 +5,9 @@
 
 <div id="page-content-wrapper">
     <div class="container-fluid">
-        <h1 class="mt-4">Daftar Makanan</h1>
+        <h1 class="mt-4">Daftar Warga </h1>
         
-        <a href="{{ route('admin.daftarmakanan.create') }}" class="btn btn-primary">Tambah Makanan</a>
+        <a href="{{ route('admin.daftarmakanan.create') }}" class="btn btn-primary">Tambah Data</a>
 
         <table class="table table-bordered mt-3">
             <thead class="thead-dark">
