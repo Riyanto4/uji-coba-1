@@ -41,7 +41,15 @@
 
         <div class="form-group my-2">
             <label for="Agama">Agama</label>
-            <input type="text" class="form-control" id="Agama" name="Agama" required></input>
+            <select type="text" class="form-control" id="Agama" name="Agama" required>
+                <option selected>Pilih Agama</option>
+                <option value="Islam">Islam</option>
+                <option value="Kriten">Kristen</option>
+                <option value="Katholik">Katholik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Budha">Budha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
         </div>
 
         <div class="form-group my-2 form-control">
