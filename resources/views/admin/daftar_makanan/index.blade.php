@@ -12,25 +12,27 @@
         <table class="table table-bordered mt-3">
             <thead class="thead-dark">
                 <tr>
-                    <th>No.</th>
                     <th>NIK</th>
                     <th>Nama</th>
-                    <th>Ttl</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
                     <th>Alamat</th>
                     <th>Status</th>
                     <th>Agama</th>
+                    <th>Foto</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($menus as $menu)
                 <tr>
-                    <td>{{ $menu->nama_menu }}</td>
-                    <td>{{ $menu->harga }}</td>
-                    <td></td>
-                    <td></td>
-                    <td>{{ $menu->kategori }}</td>
-                    <td>{{ $menu->deskripsi }}</td>
+                    <td>{{ $menu->NIK }}</td>
+                    <td>{{ $menu->Nama }}</td>
+                    <td>{{ $menu->Tempat_Lahir }}</td>
+                    <td>{{ $menu->Tanggal_Lahir }}</td>
+                    <td>{{ $menu->Alamat }}</td>
+                    <td>{{ $menu->Status }}</td>
+                    <td>{{ $menu->Agama }}</td>
                     <td>
                         <!-- Menampilkan gambar menggunakan tag img -->
                         <img src="{{ asset('foto/' . $menu->image) }}" alt="{{ $menu->nama_menu }}" style="max-width: 100px;">

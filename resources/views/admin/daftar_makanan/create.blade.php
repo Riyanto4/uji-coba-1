@@ -3,40 +3,45 @@
 @section('content')
 
 
-<div class="container mt-4">
+<div class="container mt-2">
     <h2>Tambah Data Warga</h2>
 
     <form action="{{ route('admin.daftarmakanan.store') }}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="form-group my-2">
-            <label for="nama_menu">NIK</label>
-            <input type="text" class="form-control" id="nama_menu" name="nama_menu" required>
+            <label for="NIK">NIK</label>
+            <input type="text" class="form-control" id="NIK" name="NIK" required>
         </div>
 
         <div class="form-group my-2">
-            <label for="nama_menu">Nama</label>
-            <input type="text" class="form-control" id="nama_menu" name="nama_menu" required>
+            <label for="Nama">Nama</label>
+            <input type="text" class="form-control" id="Nama" name="Nama" required>
         </div>
 
         <div class="form-group my-2">
-            <label for="harga">Tempat, Tanggal Lahir</label>
-            <input type="text" class="form-control" id="harga" name="harga" required>
+            <label for="Tempat Lahir">Tempat Lahir</label>
+            <input type="text" class="form-control" id="Tempat Lahir" name="Tempat Lahir" required>
         </div>
 
         <div class="form-group my-2">
-            <label for="kategori">Alamat</label>
-            <input type="text" class="form-control" id="" name="" required>
+            <label for="Tanggal Lahir">Tanggal Lahir</label>
+            <input type="date" class="form-control" id="Tanggal Lahir" name="Tanggal Lahir" required>
         </div>
 
         <div class="form-group my-2">
-            <label for="deskripsi">Status</label>
-            <input class="form-control" id="deskripsi" name="deskripsi" rows="3" required></input>
+            <label for="Alamat">Alamat</label>
+            <input type="text" class="form-control" id="Alamat" name="Alamat" required>
         </div>
 
         <div class="form-group my-2">
-            <label for="deskripsi">Agama</label>
-            <input class="form-control" id="deskripsi" name="deskripsi" rows="3" required></input>
+            <label for="Status">Status</label>
+            <input type="text" class="form-control" id="Status" name="Status" required></input>
+        </div>
+
+        <div class="form-group my-2">
+            <label for="Agama">Agama</label>
+            <input type="text" class="form-control" id="Agama" name="Agama" required></input>
         </div>
 
         <div class="form-group my-2 form-control">

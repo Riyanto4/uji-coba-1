@@ -10,10 +10,13 @@ class Menu extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_menu',
-        'harga',
-        'kategori',
-        'deskripsi',
+        'NIK',
+        'Nama',
+        'Tempat_Lahir',
+        'Tanggal_Lahir',
+        'Alamat',
+        'Status',
+        'Agama',
         'image',
     ];
 
