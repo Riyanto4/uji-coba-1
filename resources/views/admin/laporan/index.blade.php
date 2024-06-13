@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="{{ asset('foto/FotoIkhwan.jpg')}}" class="card-img-top" alt="" width="100%" height="550px">
+                <img src="{{ asset('foto/ikhwan.png')}}" class="card-img-top" alt="" width="100%" height="550px">
                 <div class="card-body">
                     <h5 class="card-title">Nama : Ikhwan Aji Ginanjar</h5>
                     <p class="card-text">NIM : STI202203295</p>
