@@ -2,22 +2,58 @@
 
 @section('content')
 <div class="container mt-5">
-    <h2 class="mb-4">Menu Makanan</h2>
+    <h2 class="mb-4">Dibuat Oleh</h2>
     <div class="row">
-        @foreach($menus as $menu)
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <!-- Ganti URL gambar dengan path sesuai dengan struktur penyimpanan gambar Anda -->
-                    <img src="{{ asset('foto/' . $menu->image) }}" class="card-img-top" alt="{{ $menu->nama_menu }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $menu->nama_menu }}</h5>
-                        <p class="card-text">{{ $menu->deskripsi }}</p>
-                        <p class="card-text">Rp. {{ $menu->harga }}</p>
-                        <a href="{{ route('menu.addToCart', ['id' => $menu->id]) }}" class="btn btn-primary">Pesan Sekarang</a>
-                    </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('foto/FotoDafa.jpg')}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Nama : Dafa Ahmad Sajangah</h5>
+                    <p class="card-text">NIM : STI202202731</p>
+                    <p class="card-text">Kelas : C4.1</p>
                 </div>
             </div>
-        @endforeach
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('foto/FotoDafa.jpg')}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Nama : Nurdani Dwi Romadon</h5>
+                    <p class="card-text">NIM : STI202203300</p>
+                    <p class="card-text">Kelas : C4.1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('foto/FotoDafa.jpg')}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Nama : Ikhwan Aji Ginanjar</h5>
+                    <p class="card-text">NIM : STI202203295</p>
+                    <p class="card-text">Kelas : C4.1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('foto/FotoDafa.jpg')}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Nama : Riyanto</h5>
+                    <p class="card-text">NIM : STI202202753</p>
+                    <p class="card-text">Kelas : C4.1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('foto/FotoDafa.jpg')}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Nama : Mega Silvia</h5>
+                    <p class="card-text">NIM : STI202202731</p>
+                    <p class="card-text">Kelas : C4.1</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
