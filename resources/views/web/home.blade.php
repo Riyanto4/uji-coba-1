@@ -4,18 +4,23 @@
 
 <div class="container mt-5">
     <h2 class="mb-4">Data Sensus Warga</h2>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
     <div class="row">
         <table class="table table-bordered mt-3">
             <thead class="thead-dark">
                 <tr>
                     <th>NIK</th>
+                    <th>Foto</th>
                     <th>Nama</th>
                     <th>Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Alamat</th>
                     <th>Status</th>
                     <th>Agama</th>
-                    <th>Foto</th>
                 </tr>
             </thead>
             <tbody>
