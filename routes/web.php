@@ -44,24 +44,24 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
- 
-     // Daftar Makanan
-     Route::get('/daftarmakanan', [AdminDaftarMakananController::class, 'index'])->name('admin.daftarmakanan');
-     Route::get('/daftarmakanan/create', [AdminDaftarMakananController::class, 'create'])->name('admin.daftarmakanan.create');
-     Route::post('/daftarmakanan', [AdminDaftarMakananController::class, 'store'])->name('admin.daftarmakanan.store');
-     Route::get('/daftarmakanan/{id}/edit', [AdminDaftarMakananController::class, 'edit'])->name('admin.daftarmakanan.edit');
-     Route::put('/daftarmakanan/{id}', [AdminDaftarMakananController::class, 'update'])->name('admin.daftarmakanan.update');
-     Route::delete('/daftarmakanan/{id}', [AdminDaftarMakananController::class, 'destroy'])->name('admin.daftarmakanan.destroy');
 
-     //Pembayaran
+    // Daftar Makanan
+    Route::get('/daftarmakanan', [AdminDaftarMakananController::class, 'index'])->name('admin.daftarmakanan');
+    Route::get('/daftarmakanan/create', [AdminDaftarMakananController::class, 'create'])->name('admin.daftarmakanan.create');
+    Route::post('/daftarmakanan', [AdminDaftarMakananController::class, 'store'])->name('admin.daftarmakanan.store');
+    Route::get('/daftarmakanan/{id}/edit', [AdminDaftarMakananController::class, 'edit'])->name('admin.daftarmakanan.edit');
+    Route::put('/daftarmakanan/{id}', [AdminDaftarMakananController::class, 'update'])->name('admin.daftarmakanan.update');
+    Route::delete('/daftarmakanan/{id}', [AdminDaftarMakananController::class, 'destroy'])->name('admin.daftarmakanan.destroy');
 
-     Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('admin.pembayaran');
-     Route::post('/verifikasi-pembayaran/{userId}', [PembayaranController::class, 'verifikasiPembayaran'])->name('verifikasi.pembayaran');
-     // web.php
-    
+    //Pembayaran
 
-     
-     
+    Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('admin.pembayaran');
+    Route::post('/verifikasi-pembayaran/{userId}', [PembayaranController::class, 'verifikasiPembayaran'])->name('verifikasi.pembayaran');
+    // web.php
+
+
+
+
 });
 
 Route::get('/menu/{id}/addToCart', [MenuController::class, 'addToCart'])->name('menu.addToCart');
@@ -74,8 +74,3 @@ Route::get('/hapusDaftarPesanan/{index}', [DaftarPesananController::class, 'hapu
 
 //laporan
 Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan');
-
-
-
-
-

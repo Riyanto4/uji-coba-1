@@ -11,6 +11,6 @@ class HomeController extends Controller
     {
         $menus = Menu::all();
         // $username = auth()->user()->username;
-        return view('web.home', compact('menus'));
+        return view('admin.dashboard', compact('menus'));
     }
 }

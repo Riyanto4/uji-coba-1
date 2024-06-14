@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-primary">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand" href="{{ route('home') }}"><b>Web Data Warga</b></a>
 

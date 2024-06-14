@@ -4,17 +4,17 @@
 
 <div id="page-content-wrapper">
     <!-- Top navigation-->
-
+    <h1 style="text-align: center;" class="mt-4">Selamat Datang di Halaman WEB SENSUS WARGA</h1>
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('foto/231208110248.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{ asset('foto/alunbmys.jpg')}}" class="d-block w-100" alt="..." width="100%" height="500px">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('foto/231208110259.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{ asset('foto/alunpwt.jpeg')}}" class="d-block w-100" alt="..." width="100%" height="500px">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('foto/231210030450.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{ asset('foto/alunpbg.jpg')}}" class="d-block w-100" alt="..." width="100%" height="500px">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -28,8 +28,8 @@
     </div>
 
     <!-- Page content-->
-    <div class="container-fluid">
-        <h1 class="mt-4">Selamat Datang di Halaman Admin WEB SENSUS WARGA</h1>
+    <!-- <div class="container-fluid">
+        
         <br>
         <table class="table">
             <thead>
@@ -55,7 +55,7 @@
             </tbody>
         </table>
 
-    </div>
+    </div> -->
 </div>
 
 @endsection
