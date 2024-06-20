@@ -25,6 +25,11 @@ use Illuminate\Support\Facades\Route;
 // Menampilkan form login
 // Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 
+// menampilkan semua user
+Route::get('/users', [AuthController::class, 'index']);
+Route::get('admin/users', function () {
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users');
+});
 
 // Menampilkan form registrasi
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register')->middleware('guest');
