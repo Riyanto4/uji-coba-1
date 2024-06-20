@@ -1,5 +1,7 @@
 @if(Auth::check() && Auth::user()->username == "Admin")
+<!-- Wrapper -->
 <div class="d-flex" id="wrapper">
+
     <!-- Sidebar-->
     <div class="border-end bg-white" id="sidebar-wrapper">
 

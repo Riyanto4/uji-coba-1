@@ -5,7 +5,7 @@
 <div id="page-content-wrapper">
     <!-- Top navigation-->
     <h1 style="text-align: center;" class="mt-4">Selamat Datang di Halaman WEB SENSUS WARGA</h1>
-    <div id="carouselExample" class="carousel slide">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{{ asset('foto/alunbmys.jpg')}}" class="d-block w-100" alt="..." width="100%" height="500px">
@@ -17,11 +17,11 @@
                 <img src="{{ asset('foto/alunpbg.jpg')}}" class="d-block w-100" alt="..." width="100%" height="500px">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
