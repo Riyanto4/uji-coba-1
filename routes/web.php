@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 // menampilkan semua user
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::get('/users', [UsersController::class, 'index']);
+    Route::get('/users', [UsersController::class, 'index'])->middleware('auth');
     Route::get('/users', [UsersController::class, 'index'])->name('admin.users');
 });
 
@@ -49,6 +50,11 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //web
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    Route::get('/program', [ProgramController::class, 'index'])->name('admin.program');
+});
 
 
 
