@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +27,14 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 
 // menampilkan semua user
-Route::get('/users', [AuthController::class, 'index']);
-Route::get('admin/users', function () {
-    Route::get('/users', [UserController::class, 'index'])->name('admin.users');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    Route::get('/users', [UsersController::class, 'index']);
+    Route::get('/users', [UsersController::class, 'index'])->name('admin.users');
 });
+
+
+
+
 
 // Menampilkan form registrasi
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register')->middleware('guest');
@@ -60,8 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     //Pembayaran
 
-    Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('admin.pembayaran');
-    Route::post('/verifikasi-pembayaran/{userId}', [PembayaranController::class, 'verifikasiPembayaran'])->name('verifikasi.pembayaran');
+
     // web.php
 
 

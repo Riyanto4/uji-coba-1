@@ -1,7 +1,8 @@
 @extends('layout.app')
 
 @section('content')
-<table>
+
+<table class="table">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -13,7 +14,11 @@
         @foreach($users as $user)
         <td>{{$user -> id}}</td>
         <td>{{$user -> username}}</td>
-        <td>{{$user -> create_at}}</td>
+        <td>{{$user -> created_at}}</td>
     </tbody>
+    @endforeach
 </table>
+
+
+
 @endsection
